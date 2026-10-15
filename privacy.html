@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz | Eesel Air</title>
+    <script src="css.js"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/85 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-xl shadow-lg shadow-cyan-500/20">
+                        ✈</div>
+                    <div>
+                        <div class="font-bold text-lg text-white">Eesel Air</div>
+                        <div class="hidden sm:block text-[10px] tracking-[.22em] uppercase text-slate-500">Fly simple
+                        </div>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center gap-1">
+                    <a data-nav-link href="index.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Startseite</a>
+                    <a data-nav-link href="index.html#flight-search"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Flüge
+                        buchen</a>
+                    <a data-nav-link href="bookings.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Meine
+                        Buchungen</a>
+                    <a data-nav-link href="flight-status.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Flugstatus</a>
+                    <a data-nav-link href="checkin.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Check-in</a>
+                    <a data-nav-link href="baggage.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Gepäck</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-2">
+                    <a href="contact.html" class="px-3 py-2 text-sm text-slate-400 hover:text-white">Hilfe</a>
+                    <a href="index.html#flight-search"
+                        class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 px-4 py-2.5 rounded-xl text-sm font-semibold">Flug
+                        buchen</a>
+                </div>
+                <button id="eesel-menu-btn" type="button" aria-label="Menü öffnen"
+                    class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+                    <svg id="eesel-menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="eesel-menu-close" class="hidden w-6 h-6" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="eesel-mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-900/95 px-4 py-4">
+            <nav class="space-y-1">
+                <a data-nav-link href="index.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Startseite</a>
+                <a data-nav-link href="index.html#flight-search"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Flüge
+                    buchen</a>
+                <a data-nav-link href="bookings.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Meine
+                    Buchungen</a>
+                <a data-nav-link href="flight-status.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Flugstatus</a>
+                <a data-nav-link href="checkin.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Check-in</a>
+                <a data-nav-link href="baggage.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Gepäck</a>
+                <a href="seats.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Sitzplätze</a>
+                <a href="travel-info.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Reiseinformationen</a>
+                <a href="contact.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Hilfe
+                    & Kontakt</a>
+                <a href="faq.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Häufige
+                    Fragen</a>
+                <a href="about.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Über
+                    Eesel Air</a>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+        <div class="max-w-3xl">
+            <p class="text-cyan-400 font-semibold text-sm uppercase tracking-widest">Rechtliches</p>
+            <h1 class="text-4xl md:text-5xl font-bold mt-2">Datenschutz</h1>
+            <p class="text-slate-400 mt-4 leading-relaxed">Informationen darüber, welche Daten dieses Demo-Projekt im
+                Browser verarbeitet.</p>
+        </div>
+
+        <section class="mt-10 space-y-6">
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">1. Allgemeiner Hinweis</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Eesel Air ist ein lokales Demo-Projekt. Ein großer Teil der Datenverarbeitung findet direkt im
+                    Browser statt.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">2. IndexedDB</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Abgeschlossene Demo-Buchungen können lokal in der IndexedDB-Datenbank deines Browsers gespeichert
+                    werden. Dazu können unter anderem Buchungscode, Strecke, Datum, Uhrzeit, Passagierdaten, Sitzplatz,
+                    Gepäckauswahl und vereinfachte Zahlungsinformationen gehören.
+                </p>
+
+                <div class="mt-5 bg-slate-950 border border-slate-800 rounded-xl p-5">
+                    <p class="text-sm text-slate-400">Die Daten verlassen durch diese lokale Speicherung nicht
+                        automatisch deinen Browser.</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">3. SessionStorage</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Während der Übergabe eines ausgewählten Fluges von der Flugsuche zur Buchungsseite kann
+                    SessionStorage verwendet werden. Diese Zwischendaten dienen nur dem aktuellen Buchungsvorgang.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">4. Zahlungsdaten</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Die Zahlungsseite ist eine Simulation. Vollständige Kartennummern und CVC-Werte sollen nicht
+                    dauerhaft in IndexedDB gespeichert werden. Für die Demo können lediglich reduzierte Informationen
+                    wie die letzten vier Ziffern und ein Zahlungsstatus gespeichert werden.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">5. Flughafen-Daten</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Für die Flughafensuche kann das Projekt öffentliche Datendateien über ein CDN abrufen. Dabei wird
+                    technisch eine Verbindung zu dem jeweiligen CDN-Anbieter hergestellt.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">6. QR-Code</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Für die digitale Bordkarte kann eine JavaScript-Bibliothek zur lokalen Erzeugung eines QR-Codes
+                    geladen werden. Der QR-Code enthält einen für die Demo erzeugten Buchungs-Token.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">7. Löschen lokaler Daten</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Gespeicherte Buchungen können innerhalb der Anwendung entfernt werden. Zusätzlich kannst du
+                    Website-Daten über die Einstellungen deines Browsers löschen.
+                </p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                <h2 class="text-xl font-bold">8. Kontakt</h2>
+
+                <p class="text-slate-400 mt-4 leading-relaxed">
+                    Bei Fragen zu dieser Demo-Datenschutzerklärung kannst du die Seite <a href="contact.html"
+                        class="text-cyan-400 hover:text-cyan-300">Hilfe & Kontakt</a> verwenden.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="mt-12 flex flex-wrap gap-3">
+            <a href="impressum.html"
+                class="border border-slate-700 hover:border-cyan-500/50 px-5 py-3 rounded-xl font-semibold transition">Impressum</a>
+            <a href="terms.html"
+                class="border border-slate-700 hover:border-cyan-500/50 px-5 py-3 rounded-xl font-semibold transition">Nutzungsbedingungen</a>
+        </section>
+
+    </main>
+    <footer class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="index.html" class="inline-flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
+                            ✈</div><span class="text-xl font-bold">Eesel Air</span>
+                    </a>
+                    <p class="text-sm text-slate-400 mt-5 leading-relaxed">Flüge finden, Buchungen verwalten und
+                        wichtige Reiseinformationen an einem Ort.</p>
+                    <p class="text-sm text-slate-500 mt-5">Eesel Air · Demo-Airline-Projekt</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Service</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="baggage.html" class="text-slate-400 hover:text-cyan-400">Gepäck</a>
+                        <a href="seats.html" class="text-slate-400 hover:text-cyan-400">Sitzplätze</a>
+                        <a href="travel-info.html" class="text-slate-400 hover:text-cyan-400">Reiseinformationen</a>
+                        <a href="contact.html" class="text-slate-400 hover:text-cyan-400">Hilfe & Kontakt</a>
+                        <a href="faq.html" class="text-slate-400 hover:text-cyan-400">Häufige Fragen</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Unternehmen</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="about.html" class="text-slate-400 hover:text-cyan-400">Über Eesel Air</a>
+                        <a href="career.html" class="text-slate-400 hover:text-cyan-400">Karriere</a>
+                        <a href="press.html" class="text-slate-400 hover:text-cyan-400">Presse</a>
+                        <a href="sustainability.html" class="text-slate-400 hover:text-cyan-400">Nachhaltigkeit</a>
+                        <a href="partners.html" class="text-slate-400 hover:text-cyan-400">Partner</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Reise verwalten</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="bookings.html" class="text-slate-400 hover:text-cyan-400">Meine Buchungen</a>
+                        <a href="checkin.html" class="text-slate-400 hover:text-cyan-400">Online Check-in</a>
+                        <a href="flight-status.html" class="text-slate-400 hover:text-cyan-400">Flugstatus</a>
+                        <a href="index.html#flight-search" class="text-slate-400 hover:text-cyan-400">Flüge suchen</a>
+                    </nav>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                    <a href="impressum.html" class="text-slate-500 hover:text-slate-300">Impressum</a>
+                    <a href="privacy.html" class="text-slate-500 hover:text-slate-300">Datenschutz</a>
+                    <a href="terms.html" class="text-slate-500 hover:text-slate-300">AGB</a>
+                </div>
+                <p class="text-sm text-slate-600">© 2026 Eesel Air</p>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <p class="text-xs text-slate-600">Mit ✈ für Reisende entwickelt.</p>
+                <div class="flex gap-3">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">IG</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">f</a>
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">X</a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="layout.js"></script>
+</body>
+
+</html>

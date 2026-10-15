@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Eesel Air</title>
+    <script src="css.js"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/85 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-xl shadow-lg shadow-cyan-500/20">
+                        ✈</div>
+                    <div>
+                        <div class="font-bold text-lg text-white">Eesel Air</div>
+                        <div class="hidden sm:block text-[10px] tracking-[.22em] uppercase text-slate-500">Fly simple
+                        </div>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center gap-1">
+                    <a data-nav-link href="index.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Startseite</a>
+                    <a data-nav-link href="index.html#flight-search"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Flüge
+                        buchen</a>
+                    <a data-nav-link href="bookings.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Meine
+                        Buchungen</a>
+                    <a data-nav-link href="flight-status.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Flugstatus</a>
+                    <a data-nav-link href="checkin.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Check-in</a>
+                    <a data-nav-link href="baggage.html"
+                        class="px-3 py-2 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800/60">Gepäck</a>
+                </nav>
+                <div class="hidden lg:flex items-center gap-2">
+                    <a href="contact.html" class="px-3 py-2 text-sm text-slate-400 hover:text-white">Hilfe</a>
+                    <a href="index.html#flight-search"
+                        class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 px-4 py-2.5 rounded-xl text-sm font-semibold">Flug
+                        buchen</a>
+                </div>
+                <button id="eesel-menu-btn" type="button" aria-label="Menü öffnen"
+                    class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+                    <svg id="eesel-menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="eesel-menu-close" class="hidden w-6 h-6" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="eesel-mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-900/95 px-4 py-4">
+            <nav class="space-y-1">
+                <a data-nav-link href="index.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Startseite</a>
+                <a data-nav-link href="index.html#flight-search"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Flüge
+                    buchen</a>
+                <a data-nav-link href="bookings.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Meine
+                    Buchungen</a>
+                <a data-nav-link href="flight-status.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Flugstatus</a>
+                <a data-nav-link href="checkin.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Check-in</a>
+                <a data-nav-link href="baggage.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Gepäck</a>
+                <a href="seats.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Sitzplätze</a>
+                <a href="travel-info.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Reiseinformationen</a>
+                <a href="contact.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Hilfe
+                    & Kontakt</a>
+                <a href="faq.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Häufige
+                    Fragen</a>
+                <a href="about.html"
+                    class="block px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-400 hover:text-white hover:bg-slate-800">Über
+                    Eesel Air</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="flight-search" class="relative overflow-hidden border-b border-slate-800">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-cyan-950"></div>
+            <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-cyan-500/10 blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-[450px] h-[450px] rounded-full bg-blue-600/10 blur-3xl"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+                <div class="max-w-3xl mb-10">
+                    <span
+                        class="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-300 mb-5">✈
+                        Eesel Air</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">Die Welt
+                        wartet auf dich.</h1>
+                    <p class="mt-5 text-lg text-slate-300 max-w-2xl leading-relaxed">Finde passende Flüge zu Reisezielen
+                        weltweit, vergleiche Abflugzeiten und Preise und stelle deine Reise direkt online zusammen.</p>
+                </div>
+
+                <div class="bg-white text-slate-900 rounded-2xl shadow-2xl shadow-black/30 overflow-hidden">
+                    <div class="flex border-b border-slate-200 overflow-x-auto">
+                        <a href="index.html"
+                            class="px-6 py-4 text-sm font-semibold text-blue-700 border-b-2 border-blue-600 whitespace-nowrap">Flüge</a>
+                        <a href="bookings.html"
+                            class="px-6 py-4 text-sm font-medium text-slate-500 hover:text-slate-900 whitespace-nowrap transition">Meine
+                            Buchungen</a>
+                        <a href="checkin.html"
+                            class="px-6 py-4 text-sm font-medium text-slate-500 hover:text-slate-900 whitespace-nowrap transition">Check-in</a>
+                        <a href="flight-status.html"
+                            class="px-6 py-4 text-sm font-medium text-slate-500 hover:text-slate-900 whitespace-nowrap transition">Flugstatus</a>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-5 mb-5 text-sm">
+                            <label class="flex items-center gap-2">
+                                <input id="trip-return" type="radio" name="trip" value="return" checked
+                                    class="accent-blue-600">
+                                Hin- und Rückflug
+                            </label>
+
+                            <label class="flex items-center gap-2">
+                                <input id="trip-oneway" type="radio" name="trip" value="oneway" class="accent-blue-600">
+                                Nur Hinflug
+                            </label>
+
+                            <span class="text-blue-700 font-medium">Economy · 1 Reisender</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 mb-1">Von</label>
+                                <input id="flight-from" type="text" autocomplete="off"
+                                    placeholder="Stadt, Flughafen oder IATA-Code"
+                                    class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 mb-1">Nach</label>
+                                <input id="flight-to" type="text" autocomplete="off"
+                                    placeholder="Stadt, Flughafen oder IATA-Code"
+                                    class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 mb-1">Hinflug</label>
+                                <input id="flight-date" type="date"
+                                    class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div id="return-date-wrapper">
+                                <label class="block text-xs font-semibold text-slate-500 mb-1">Rückflug</label>
+                                <input id="return-date" type="date"
+                                    class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 mb-1">Ungefähr um</label>
+                                <input id="flight-time" type="time" value="12:00"
+                                    class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <div class="flex items-end">
+                                <button id="search-flights-btn" type="button"
+                                    class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold px-5 py-3 rounded-xl transition shadow-lg shadow-blue-500/20">Flüge
+                                    suchen</button>
+                            </div>
+                        </div>
+
+                        <div id="flight-search-error"
+                            class="hidden mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                        </div>
+
+                        <div id="airport-database-status" class="mt-4 text-xs text-slate-500">Flughafen-Datenbank wird
+                            geladen...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flight-results-section" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mb-7">
+                <p class="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Flugergebnisse</p>
+
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mt-2">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white">Verfügbare Flüge</h2>
+                        <p id="flight-results-description" class="text-slate-400 mt-2"></p>
+                    </div>
+
+                    <div id="flight-results-count" class="text-sm text-slate-400"></div>
+                </div>
+            </div>
+
+            <div id="flight-results" class="space-y-4"></div>
+
+            <div id="load-more-wrapper" class="hidden mt-8 flex justify-center">
+                <button id="load-more-flights" type="button"
+                    class="min-w-[190px] inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/60 text-white font-semibold px-6 py-3 rounded-xl transition">
+                    <svg id="load-more-spinner" class="hidden animate-spin w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                    </svg>
+
+                    <span id="load-more-text">Weitere Flüge</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+
+                <a href="checkin.html"
+                    class="group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 hover:bg-slate-800 transition">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                        ✓</div>
+                    <h3 class="font-semibold">Online Check-in</h3>
+                    <p class="text-xs text-slate-500 mt-1">Checke bequem online ein und erhalte deine digitale
+                        Bordkarte.</p>
+                </a>
+
+                <a href="flight-status.html"
+                    class="group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 hover:bg-slate-800 transition">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                        ✈</div>
+                    <h3 class="font-semibold">Flugstatus</h3>
+                    <p class="text-xs text-slate-500 mt-1">Prüfe Abflugzeiten und den aktuellen Status deiner nächsten
+                        Reise.</p>
+                </a>
+
+                <a href="bookings.html"
+                    class="group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 hover:bg-slate-800 transition">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                        🎫</div>
+                    <h3 class="font-semibold">Meine Buchungen</h3>
+                    <p class="text-xs text-slate-500 mt-1">Verwalte gespeicherte Reisen, Sitzplätze, Gepäck und
+                        Check-in.</p>
+                </a>
+
+                <a href="baggage.html"
+                    class="group bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 hover:bg-slate-800 transition">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                        🎒</div>
+                    <h3 class="font-semibold">Gepäck</h3>
+                    <p class="text-xs text-slate-500 mt-1">Alle Regeln zu Hand-, Aufgabe- und Sondergepäck auf einen
+                        Blick.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="max-w-3xl">
+                <p class="text-cyan-400 font-semibold text-sm uppercase tracking-widest">Einfach reisen</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Von der Flugsuche bis zum Boarding</h2>
+                <p class="text-slate-400 mt-4 leading-relaxed">Mit Eesel Air planst du deine Reise in wenigen Schritten
+                    und behältst alle wichtigen Informationen an einem Ort.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">
+                        1</div>
+                    <h3 class="text-lg font-bold mt-5">Flug suchen</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Wähle Start, Ziel, Datum und Wunschzeit und
+                        finde passende Verbindungen.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">
+                        2</div>
+                    <h3 class="text-lg font-bold mt-5">Reise gestalten</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Wähle Sitzplatz und Gepäck passend zu deinen
+                        Reiseplänen.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">
+                        3</div>
+                    <h3 class="text-lg font-bold mt-5">Online einchecken</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Starte deinen Check-in und erhalte eine
+                        digitale Bordkarte mit QR-Code.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold">
+                        4</div>
+                    <h3 class="text-lg font-bold mt-5">Entspannt reisen</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Behalte Flugstatus und Buchungsdaten bis zum
+                        Boarding im Blick.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-slate-800 bg-slate-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+                    <div>
+                        <p class="text-cyan-400 font-semibold text-sm uppercase tracking-widest">Beliebte Verbindungen
+                        </p>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2">Wohin darf es gehen?</h2>
+                        <p class="text-slate-400 mt-3 max-w-2xl">Entdecke beliebte Kurz-, Mittel- und Langstrecken.</p>
+                    </div>
+
+                    <a href="#flight-search" class="text-cyan-400 hover:text-cyan-300 font-medium">Flug suchen →</a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → Spanien</p>
+                        <h3 class="text-xl font-bold mt-2">Köln → Barcelona</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Direktflug</span>
+                            <span class="text-cyan-400 font-bold">ab 89 €</span>
+                        </div>
+                    </a>
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → Portugal</p>
+                        <h3 class="text-xl font-bold mt-2">Düsseldorf → Lissabon</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Direktflug</span>
+                            <span class="text-cyan-400 font-bold">ab 119 €</span>
+                        </div>
+                    </a>
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → Vietnam</p>
+                        <h3 class="text-xl font-bold mt-2">Frankfurt → Hanoi</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Langstrecke</span>
+                            <span class="text-cyan-400 font-bold">ab 479 €</span>
+                        </div>
+                    </a>
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → Großbritannien</p>
+                        <h3 class="text-xl font-bold mt-2">Berlin → London</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Direktflug</span>
+                            <span class="text-cyan-400 font-bold">ab 69 €</span>
+                        </div>
+                    </a>
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → Japan</p>
+                        <h3 class="text-xl font-bold mt-2">München → Tokio</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Langstrecke</span>
+                            <span class="text-cyan-400 font-bold">ab 569 €</span>
+                        </div>
+                    </a>
+
+                    <a href="#flight-search"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <p class="text-sm text-slate-500">Deutschland → VAE</p>
+                        <h3 class="text-xl font-bold mt-2">Frankfurt → Dubai</h3>
+                        <div class="flex justify-between mt-7">
+                            <span class="text-sm text-slate-500">Direktflug</span>
+                            <span class="text-cyan-400 font-bold">ab 299 €</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-cyan-400 font-semibold text-sm uppercase tracking-widest">Warum Eesel Air?</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Einfacher reisen, von Anfang bis Ende</h2>
+                <p class="text-slate-400 mt-4">Digitale Services begleiten dich von der ersten Suche bis zur Bordkarte.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">⚡</div>
+                    <h3 class="text-lg font-bold mt-5">Schnelle Buchung</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Vergleiche Zeiten und Preise und buche ohne
+                        unnötige Umwege.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">📱</div>
+                    <h3 class="text-lg font-bold mt-5">Alles digital</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Buchung, Check-in, Bordkarte und Flugstatus
+                        direkt auf deinem Gerät.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">💺</div>
+                    <h3 class="text-lg font-bold mt-5">Deine Wahl</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Sitzplatz und Gepäck lassen sich passend zu
+                        deiner Reise auswählen.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">🌍</div>
+                    <h3 class="text-lg font-bold mt-5">Weltweite Ziele</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Von Europa bis Asien und Amerika findest du
+                        zahlreiche Ziele.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">🔄</div>
+                    <h3 class="text-lg font-bold mt-5">Einfach verwalten</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">Greife jederzeit auf deine gespeicherten
+                        Buchungen zu.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-7">
+                    <div class="text-3xl">💬</div>
+                    <h3 class="text-lg font-bold mt-5">Hilfe unterwegs</h3>
+                    <p class="text-sm text-slate-400 mt-3 leading-relaxed">FAQ, Reiseinformationen und
+                        Kontaktmöglichkeiten stehen jederzeit bereit.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold">Mehr als nur ein Flug</h2>
+                    <p class="text-slate-400 mt-3">Plane auch die Details rund um deine Reise.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <a href="travel-info.html"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <div class="text-3xl">🧭</div>
+                        <h3 class="font-bold text-lg mt-5">Reiseinformationen</h3>
+                        <p class="text-sm text-slate-500 mt-2">Wichtige Hinweise für Vorbereitung, Flughafen und
+                            Einreise.</p>
+                    </a>
+
+                    <a href="seats.html"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <div class="text-3xl">💺</div>
+                        <h3 class="font-bold text-lg mt-5">Sitzplätze</h3>
+                        <p class="text-sm text-slate-500 mt-2">Erfahre mehr über Standard-, Fenster- und
+                            Extra-Legroom-Sitze.</p>
+                    </a>
+
+                    <a href="baggage.html"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <div class="text-3xl">🧳</div>
+                        <h3 class="font-bold text-lg mt-5">Gepäck</h3>
+                        <p class="text-sm text-slate-500 mt-2">Informiere dich über Maße, Gewicht und Zusatzgepäck.</p>
+                    </a>
+
+                    <a href="contact.html"
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6 hover:-translate-y-1 hover:border-cyan-500/40 transition">
+                        <div class="text-3xl">💬</div>
+                        <h3 class="font-bold text-lg mt-5">Hilfe & Kontakt</h3>
+                        <p class="text-sm text-slate-500 mt-2">Finde Antworten oder kontaktiere unseren Service.</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-700 to-cyan-600 p-8 md:p-14">
+                <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full border-[50px] border-white/10"></div>
+
+                <div class="relative max-w-2xl">
+                    <span class="text-sm font-semibold uppercase tracking-widest text-cyan-100">Eesel Air App</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-3">Deine Reise immer dabei.</h2>
+                    <p class="text-blue-100 mt-5 leading-relaxed">Verwalte deine Buchungen, öffne deine Bordkarte und
+                        prüfe deinen Flugstatus unterwegs.</p>
+
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <a href="bookings.html"
+                            class="bg-slate-950 text-white rounded-xl px-5 py-3 font-medium hover:bg-slate-900 transition">Meine
+                            Buchungen</a>
+                        <a href="checkin.html"
+                            class="bg-slate-950 text-white rounded-xl px-5 py-3 font-medium hover:bg-slate-900 transition">Online
+                            Check-in</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="index.html" class="inline-flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
+                            ✈</div><span class="text-xl font-bold">Eesel Air</span>
+                    </a>
+                    <p class="text-sm text-slate-400 mt-5 leading-relaxed">Flüge finden, Buchungen verwalten und
+                        wichtige Reiseinformationen an einem Ort.</p>
+                    <p class="text-sm text-slate-500 mt-5">Eesel Air · Demo-Airline-Projekt</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Service</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="baggage.html" class="text-slate-400 hover:text-cyan-400">Gepäck</a>
+                        <a href="seats.html" class="text-slate-400 hover:text-cyan-400">Sitzplätze</a>
+                        <a href="travel-info.html" class="text-slate-400 hover:text-cyan-400">Reiseinformationen</a>
+                        <a href="contact.html" class="text-slate-400 hover:text-cyan-400">Hilfe & Kontakt</a>
+                        <a href="faq.html" class="text-slate-400 hover:text-cyan-400">Häufige Fragen</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Unternehmen</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="about.html" class="text-slate-400 hover:text-cyan-400">Über Eesel Air</a>
+                        <a href="career.html" class="text-slate-400 hover:text-cyan-400">Karriere</a>
+                        <a href="press.html" class="text-slate-400 hover:text-cyan-400">Presse</a>
+                        <a href="sustainability.html" class="text-slate-400 hover:text-cyan-400">Nachhaltigkeit</a>
+                        <a href="partners.html" class="text-slate-400 hover:text-cyan-400">Partner</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Reise verwalten</h3>
+                    <nav class="mt-5 flex flex-col gap-3 text-sm">
+                        <a href="bookings.html" class="text-slate-400 hover:text-cyan-400">Meine Buchungen</a>
+                        <a href="checkin.html" class="text-slate-400 hover:text-cyan-400">Online Check-in</a>
+                        <a href="flight-status.html" class="text-slate-400 hover:text-cyan-400">Flugstatus</a>
+                        <a href="index.html#flight-search" class="text-slate-400 hover:text-cyan-400">Flüge suchen</a>
+                    </nav>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                    <a href="impressum.html" class="text-slate-500 hover:text-slate-300">Impressum</a>
+                    <a href="privacy.html" class="text-slate-500 hover:text-slate-300">Datenschutz</a>
+                    <a href="terms.html" class="text-slate-500 hover:text-slate-300">AGB</a>
+                </div>
+                <p class="text-sm text-slate-600">© 2026 Eesel Air</p>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <p class="text-xs text-slate-600">Mit ✈ für Reisende entwickelt.</p>
+                <div class="flex gap-3">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">IG</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">f</a>
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">X</a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"
+                        class="w-9 h-9 rounded-lg border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="layout.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

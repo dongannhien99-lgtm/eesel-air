@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const f=document.getElementById('contact-form'),m=document.getElementById('contact-message');if(!f)return;f.addEventListener('submit',e=>{e.preventDefault();m.classList.remove('hidden');m.textContent='Danke! Deine Nachricht wurde in dieser Demo lokal verarbeitet.';f.reset()})});
